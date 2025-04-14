@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fueling Student Innovation</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <script defer src="startCampaign.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <h1>Fueling Student Innovation</h1>
+    <p>Empowering the next generation of entrepreneurs</p>
+    <button class="btn toggle-theme" onclick="toggleTheme()">
+        <span class="theme-icon">🌙</span>
+      </button>
+  </header>
+<section id="campaignForm">
+    <h2>Create a Campaign</h2>
+    <form id="campaignFormEl">
+      <input type="text" id="startupName" placeholder="Startup Name" required />
+      <textarea id="startupDesc" placeholder="Describe your startup idea" required></textarea>
+      <input type="number" id="fundingTarget" placeholder="Funding Target" required />
+      <input type="text" id="college" placeholder="College/School" required />
+      <input type="text" id="teamMembers" placeholder="Team Members" required />
+      <input type="url" id="projectLink" placeholder="Project/Website Link (optional)" />
+      <button type="submit" class="btn btn-primary">Submit Campaign</button>
+    </form>
+    <p id="confirmation"></p>
+  </section>

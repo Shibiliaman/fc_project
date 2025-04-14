@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fueling Student Innovation</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Fueling Student Innovation</h1>
+    <p>Empowering the next generation of entrepreneurs</p>
+    <button class="btn btn-primary" onclick="location.href='campaign.html'">Start a Campaign</button>
+    <button class="btn btn-outline" onclick="scrollToSection('featured')">Donate Now</button>
+    <button class="btn toggle-theme" onclick="toggleTheme()">
+      <i class="fab fa-themeco theme-icon"></i>
+    </button>
+  </header>
+
+  <section id="featured">
+    <h2>Featured Campaigns</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Tech Startup</h3>
+        <p>Short description of the campaign...</p>
+        <div class="progress"><div class="progress-bar" style="width: 60%">60%</div></div>
+      </div>
+      <div class="card">
+        <h3>Art Project</h3>
+        <p>Short description of the campaign...</p>
+        <div class="progress"><div class="progress-bar" style="width: 80%">80%</div></div>
+      </div>
+      <div class="card">
+        <h3>Social Impact</h3>
+        <p>Short description of the campaign...</p>
+        <div class="progress"><div class="progress-bar" style="width: 45%">45%</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How It Works</h2>
+    <div class="grid">
+      <div class="card">Create Campaign</div>
+      <div class="card">Share</div>
+      <div class="card">Receive Funds</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Testimonials</h2>
+    <div class="grid">
+      <div class="card">“This platform helped me launch my dream startup!”</div>
+      <div class="card">“I love supporting student ideas with real impact.”</div>
+    </div>
+  </section>
+
+
+
+  <section>
+    <h2>Community & Updates</h2>
+    <input type="email" id="newsletterEmail" placeholder="Enter your email">
+    <button class="btn btn-outline" onclick="signUpNewsletter()">Sign up for Newsletter</button>
+    <p id="newsletterMsg"></p>
+  </section>
+
+  <section>
+    <h2>Verification & Support</h2>
+    <button class="btn btn-outline">Verify School/College</button>
+    <button class="btn btn-outline">Contact Support</button>
+    <button class="btn btn-outline">FAQs</button>
+  </section>
+</body>
+</html>
