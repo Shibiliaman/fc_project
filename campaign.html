@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fueling Student Innovation</title>
-  <link rel="stylesheet" href="style.css">
+  <title>ThinkForge: Molding young minds into makers</title>
+  <link rel="stylesheet" href="campaign.css">
   <script defer src="script.js"></script>
   <script defer src="startCampaign.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="hero-background"></div>
+  <nav class="main-nav">
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="explore.html">EXPLORE</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT US</a>
+    </div>
+  </nav>
+
   <header class="hero">
-    <h1>Fueling Student Innovation</h1>
-    <p>Empowering the next generation of entrepreneurs</p>
-    <button class="btn toggle-theme" onclick="toggleTheme()">
-        <span class="theme-icon">🌙</span>
-      </button>
+    <div class="logo-container">
+      <div class="logo">
+        <img src="logo1.png" alt="ThinkForge Logo">
+      </div>
+    <h1>ThinkForge</h1>
+    <p>Molding young minds into makers</p>
+    </button>
   </header>
-<section id="campaignForm">
-    <h2>Create a Campaign</h2>
-    <form id="campaignFormEl">
-      <input type="text" id="startupName" placeholder="Startup Name" required />
-      <textarea id="startupDesc" placeholder="Describe your startup idea" required></textarea>
-      <input type="number" id="fundingTarget" placeholder="Funding Target" required />
-      <input type="text" id="college" placeholder="College/School" required />
-      <input type="text" id="teamMembers" placeholder="Team Members" required />
-      <input type="url" id="projectLink" placeholder="Project/Website Link (optional)" />
-      <button type="submit" class="btn btn-primary">Submit Campaign</button>
-    </form>
-    <p id="confirmation"></p>
-  </section>
+
+  <main>
+    <section id="campaignForm">
+      <h2>Create a Campaign</h2>
+      <form id="campaignFormEl">
+        <input type="text" id="startupName" placeholder="Startup Name" required />
+        <textarea id="startupDesc" placeholder="Describe your startup idea" required></textarea>
+        <input type="number" id="fundingTarget" placeholder="Funding Target" required />
+        <input type="text" id="college" placeholder="College/School" required />
+        <input type="text" id="teamMembers" placeholder="Team Members" required />
+        <input type="url" id="projectLink" placeholder="Project/Website Link (optional)" />
+        <button type="submit" class="btn btn-primary">Submit Campaign</button>
+      </form>
+      <p id="confirmation"></p>
+    </section>
+  </main>
+</body>
+</html>
