@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ThinkForge:Molding young minds into makers</title>
+  <title>ThinkForge: Molding young minds into makers</title>
+  <link rel="icon" href="logo1.png">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div class="hero-background"></div>
+  <nav class="main-nav">
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="explore.html">EXPLORE</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT US</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Support Student Innovation</h1>
+    <p>Every contribution helps shape the future</p>
+  </header>
+
+  <main>
+    <section id="donateForm">
+      <h2>Make a Donation</h2>
+      <form id="donationFormEl">
+        <div class="form-group">
+          <input type="text" id="fullName" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email Address" required />
+        </div>
+        
+        <div class="amount-selector">
+          <h3>Select Amount</h3>
+          <div class="amount-buttons">
+            <button type="button" class="btn amount-btn" data-amount="100">₹100</button>
+            <button type="button" class="btn amount-btn" data-amount="500">₹500</button>
+            <button type="button" class="btn amount-btn" data-amount="1000">₹1000</button>
+            <button type="button" class="btn amount-btn" data-amount="5000">₹5000</button>
+          </div>
+          <input type="number" id="customAmount" placeholder="Custom Amount (₹)" min="1" />
+        </div>
+
+        <div class="form-group">
+          <textarea id="message" placeholder="Leave a message (optional)"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Proceed to Pay</button>
+      </form>
+      <p id="confirmation"></p>
+    </section>
+  </main>
+</body>
+</html>
