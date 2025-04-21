@@ -387,6 +387,37 @@ h2 {
   font-family: var(--heading-font);
 }
 
+.site-footer {
+  background-color: #f5f5f5;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  color: #666;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .main-nav {
