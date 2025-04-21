@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThinkForge: Explore Campaigns</title>
+  <link rel="icon" href="logo1.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero-background"></div>
+  <nav class="main-nav">
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="explore.html" class="active">EXPLORE</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT US</a>
+    </div>
+  </nav>
+
+  <div class="header-content">
+    <div class="logo-section">
+      <div class="logo">
+        <img src="logo1.png">
+      </div>
+      <div class="brand">
+        <h1>Explore Projects</h1>
+        <p>Discover innovative student campaigns</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="featured">
+      <h2>All Campaigns</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Tech Innovation Hub</h3>
+          <p>A student-led initiative to create a technology innovation space...</p>
+          <div class="progress"><div class="progress-bar" style="width: 75%">75%</div></div>
+        </div>
+        <div class="card">
+          <h3>Green Campus Project</h3>
+          <p>Environmental sustainability project for campus...</p>
+          <div class="progress"><div class="progress-bar" style="width: 40%">40%</div></div>
+        </div>
+        <div class="card">
+          <h3>Student Research Fund</h3>
+          <p>Supporting undergraduate research projects...</p>
+          <div class="progress"><div class="progress-bar" style="width: 90%">90%</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Filter Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Categories</h3>
+          <button class="btn btn-outline">Technology</button>
+          <button class="btn btn-outline">Environment</button>
+          <button class="btn btn-outline">Research</button>
+          <button class="btn btn-outline">Arts</button>
+        </div>
+        <div class="card">
+          <h3>Sort By</h3>
+          <button class="btn btn-outline">Most Funded</button>
+          <button class="btn btn-outline">Newest</button>
+          <button class="btn btn-outline">Closing Soon</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Success Stories</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project Echo</h3>
+          <p>Successfully funded and implemented campus-wide...</p>
+        </div>
+        <div class="card">
+          <h3>Art Gallery</h3>
+          <p>Student art exhibition successfully launched...</p>
+        </div>
+        <div class="card">
+          <h3>Robotics Team</h3>
+          <p>Achieved competition goals through crowdfunding...</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Stay Updated</h2>
+      <input type="email" id="newsletterEmail" placeholder="Enter your email">
+      <button class="btn btn-outline" onclick="signUpNewsletter()">Get Project Updates</button>
+      <p id="newsletterMsg"></p>
+    </section>
+  </main>
+</body>
+</html>
