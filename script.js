@@ -2,7 +2,6 @@ function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 
-
 function signUpNewsletter() {
   const email = document.getElementById("newsletterEmail").value;
   if (email) {
@@ -12,33 +11,59 @@ function signUpNewsletter() {
   }
 }
 
+// Helper function to update favicon
+function updateFavicon(isDark) {
+  const favicon = document.querySelector("link[rel='icon']");
+  favicon.href = isDark ? 'logo1.png' : 'logo2.png';
+}
+
 function toggleTheme() {
   const body = document.body;
   const themeIcon = document.querySelector('.theme-icon');
+  const logos = document.querySelectorAll('.logo img');
 
-  // Toggle the dark-theme class
-  body.classList.toggle('dark-theme');
-
-  // Update the icon based on the current theme
-  if (body.classList.contains('dark-theme')) {
-    themeIcon.classList.remove('fa-themeco');
-    themeIcon.classList.add('fa-sun'); // Change to sun icon for light mode
-  } else {
+  // Toggle the theme
+  if (body.getAttribute('data-theme') === 'light') {
+    body.setAttribute('data-theme', 'dark');
     themeIcon.classList.remove('fa-sun');
-    themeIcon.classList.add('fa-themeco'); // Change back to themeco icon for dark mode
+    themeIcon.classList.add('fa-moon');
+    // Change all logos to dark theme version
+    logos.forEach(logo => {
+      logo.src = 'logo2.png';
+    });
+  } else {
+    body.setAttribute('data-theme', 'light');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+    // Change all logos to light theme version
+    logos.forEach(logo => {
+      logo.src = 'logo1.png';
+    });
   }
 }
 
-// Optional: Set the initial theme based on user preference or default
-document.addEventListener('DOMContentLoaded', () => {
+// Watch for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
   const body = document.body;
-  const themeIcon = document.querySelector('.theme-icon');
-
-  if (body.classList.contains('dark-theme')) {
-    themeIcon.classList.remove('fa-themeco');
-    themeIcon.classList.add('fa-sun');
+  if (e.matches) {
+    body.setAttribute('data-theme', 'dark');
+    updateFavicon(true);
   } else {
-    themeIcon.classList.remove('fa-sun');
-    themeIcon.classList.add('fa-themeco');
+    body.setAttribute('data-theme', 'light');
+    updateFavicon(false);
+  }
+});
+
+// Set initial theme based on system preference
+document.addEventListener('DOMContentLoaded', () => {
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const body = document.body;
+  
+  if (prefersDarkScheme.matches) {
+    body.setAttribute('data-theme', 'dark');
+    updateFavicon(true);
+  } else {
+    body.setAttribute('data-theme', 'light');
+    updateFavicon(false);
   }
 });
