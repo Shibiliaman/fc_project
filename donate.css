@@ -1,0 +1,150 @@
+/* Donation Form Styles */
+#donateForm {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+#donateForm h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: var(--heading-font);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(243, 182, 100, 0.2);
+}
+
+.amount-selector {
+  margin: 2rem 0;
+}
+
+.amount-selector h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.amount-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.amount-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.amount-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+.amount-btn.active {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  transform: scale(1.05);
+}
+
+#customAmount {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#customAmount:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(243, 182, 100, 0.2);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+#confirmation {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  #donateForm {
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .amount-buttons {
+    gap: 0.5rem;
+  }
+
+  .amount-btn {
+    min-width: calc(50% - 0.5rem);
+  }
+}

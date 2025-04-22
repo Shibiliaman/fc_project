@@ -4,8 +4,11 @@
   --secondary-color: #F3B664;
   --background-color: #ffffff;
   --text-color: #333333;
-  --white: #fff;
-  --nav-bg: #519E8A;
+  --nav-bg: rgba(130, 181, 165, 0.8);
+  --card-bg: #ffffff;
+  --input-bg: #f5f5f5;
+  --footer-bg: #f5f5f5;
+  --footer-text: #666666;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --heading-font: 'Bakbak One', system-ui, sans-serif;
   --body-font: 'Poppins', system-ui, -apple-system, sans-serif;
@@ -17,7 +20,11 @@
   --secondary-color: #F3B61F;
   --background-color: #1a1a1a;
   --text-color: #ffffff;
-  --nav-bg: #476a6f;
+  --nav-bg: rgba(71, 106, 111, 0.8);
+  --card-bg: #2a2a2a;
+  --input-bg: #333333;
+  --footer-bg: #2a2a2a;
+  --footer-text: #999999;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -50,7 +57,7 @@ body {
   width: 1000px;
   border-radius: 50px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(var(--text-color), 0.1);
 }
 
 .nav-links {
@@ -272,7 +279,7 @@ section h2 {
 }
 
 .card {
-  background: var(--background-color);
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: var(--shadow);
@@ -288,9 +295,9 @@ input, textarea {
   width: 400px;
   padding: 0.8rem;
   margin: 0.5rem 0;
-  border: 2px solid var(--input-bg);
+  border: 2px solid var(--primary-color);
   border-radius: 8px;
-  background-color: var(--background-color);
+  background-color: var(--input-bg);
   color: var(--text-color);
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -303,8 +310,8 @@ input:hover, textarea:hover {
 
 input:focus, textarea:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(81, 158, 138, 0.2); /* Primary color with opacity */
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(var(--secondary-color), 0.2); /* Primary color with opacity */
 }
 
 textarea {
@@ -671,8 +678,8 @@ main {
 
 /* Community Section */
 .newsletter-input {
-  background-color: var(--background-color);
-  border: 2px solid var(--text-white);
+  background-color: var(--input-bg);
+  border: 2px solid var(--primary-color);
   color: var(--text-color);
   border-radius: 50px;
   padding: 1rem 2rem;
@@ -684,12 +691,13 @@ main {
 .newsletter-input:focus {
   outline: none;
   border-color: var(--secondary-color);
-  box-shadow: 0 0 0 3px rgba(243, 182, 31, 0.2);
+  box-shadow: 0 0 0 3px rgba(var(--secondary-color), 0.2);
 }
 
 /* Footer Section */
 .site-footer {
-  background-color: #f5f5f5;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   padding: 1.5rem 0;
   margin-top: 2rem;
   text-align: center;
@@ -706,7 +714,7 @@ main {
 }
 
 .footer-links a {
-  color: #666;
+  color: var(--footer-text);
   text-decoration: none;
   margin: 0 1rem;
 }
@@ -716,7 +724,7 @@ main {
 }
 
 .footer-copyright {
-  color: #666;
+  color: var(--footer-text);
 }
 
 /* Responsive adjustments */
