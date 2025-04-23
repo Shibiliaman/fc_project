@@ -371,7 +371,7 @@ textarea {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: var(--body-font);
+    font-family: var (--body-font);
 }
 
 .btn-primary {
@@ -381,8 +381,8 @@ textarea {
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid var(--text-white);
-    color: var(--text-white);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .btn:hover {
@@ -714,4 +714,34 @@ h2 {
     .btn {
         display: none;
     }
+}
+
+/* Form Message Styles */
+.form-message {
+    display: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-message.success {
+    background-color: rgba(46, 213, 115, 0.1);
+    color: #2ed573;
+    border: 1px solid #2ed573;
+}
+
+.form-message.error {
+    background-color: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    border: 1px solid #ff4757;
+}
+
+[data-theme="dark"] .form-message.success {
+    background-color: rgba(46, 213, 115, 0.2);
+}
+
+[data-theme="dark"] .form-message.error {
+    background-color: rgba(255, 71, 87, 0.2);
 }

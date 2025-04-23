@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - ThinkForge</title>
+    <link rel="icon" href="assets/logo/logo1.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/faq.css">
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/faq.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="explore.html">EXPLORE</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </nav>
+
+    <main class="faq-page">
+        <section class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-search">
+                <input type="text" id="searchFaq" placeholder="Search FAQs...">
+                <i class="fas fa-search"></i>
+            </div>
+        </section>
+
+        <section class="faq-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="general">General</button>
+            <button class="category-btn" data-category="campaigns">Campaigns</button>
+            <button class="category-btn" data-category="donations">Donations</button>
+            <button class="category-btn" data-category="verification">Verification</button>
+        </section>
+
+        <section class="faq-content">
+            <div class="faq-list">
+                <!-- General Questions -->
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <h3>What is ThinkForge?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ThinkForge is a crowdfunding platform specifically designed for student projects and initiatives. We help connect innovative student ideas with potential supporters and resources.</p>
+                    </div>
+                </div>
+
+                <!-- Campaign Questions -->
+                <div class="faq-item" data-category="campaigns">
+                    <div class="faq-question">
+                        <h3>How do I start a campaign?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To start a campaign:</p>
+                        <ol>
+                            <li>Click on "Start Campaign" button</li>
+                            <li>Fill in your project details</li>
+                            <li>Verify your school/college affiliation</li>
+                            <li>Submit for review</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Donation Questions -->
+                <div class="faq-item" data-category="donations">
+                    <div class="faq-question">
+                        <h3>How do donations work?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Donations are processed securely through our platform. You can support projects using credit/debit cards or other payment methods. Funds are released to campaign creators after verification and project milestones.</p>
+                    </div>
+                </div>
+
+                <!-- Verification Questions -->
+                <div class="faq-item" data-category="verification">
+                    <div class="faq-question">
+                        <h3>How do I verify my student status?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Student verification requires:</p>
+                        <ul>
+                            <li>Valid institutional email address</li>
+                            <li>Current student/faculty ID</li>
+                            <li>Brief description of your role</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="still-have-questions">
+            <h2>Still Have Questions?</h2>
+            <p>Can't find what you're looking for? We're here to help!</p>
+            <button class="btn btn-primary" onclick="location.href='support.html'">Contact Support</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-copyright">
+            <p>&copy; 2025 ThinkForge. All rights reserved.</p>
+          </div>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="support.html">Support</a>
+            <a href="faq.html">FAQs</a>
+          </div>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
