@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ThinkForge: Molding young minds into makers</title>
-  <link rel="icon" href="logo1.png">
-  <link rel="stylesheet" href="campaign.css">
-  <script defer src="script.js"></script>
-  <script defer src="startCampaign.js"></script>
+  <link rel="icon" href="assets/logo/logo1.png">
+  <link rel="stylesheet" href="style/campaign.css">
+  <script defer src="scripts/script.js"></script>
+  <script defer src="scripts/startCampaign.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -25,7 +25,7 @@
   <header class="hero">
     <div class="logo-container">
       <div class="logo">
-        <img src="logo1.png" alt="ThinkForge Logo">
+        <img src="assets/logo/logo1.png" alt="ThinkForge Logo">
       </div>
     <h1>ThinkForge</h1>
     <p>Molding young minds into makers</p>
@@ -33,20 +33,48 @@
   </header>
 
   <main>
-    <section id="campaignForm">
-      <h2>Create a Campaign</h2>
-      <form id="campaignFormEl">
-        <input type="text" id="startupName" placeholder="Startup Name" required />
-        <textarea id="startupDesc" placeholder="Describe your startup idea" required></textarea>
-        <input type="number" id="fundingTarget" placeholder="Funding Target" required />
-        <input type="text" id="college" placeholder="College/School" required />
-        <input type="text" id="teamMembers" placeholder="Team Members" required />
-        <input type="url" id="projectLink" placeholder="Project/Website Link (optional)" />
-        <button type="submit" class="btn btn-primary">Submit Campaign</button>
-      </form>
-      <p id="confirmation"></p>
+    <section id="campaign-form-section">
+        <h2>Create a Campaign</h2>
+        <form id="create-campaign-form" class="campaign-creation-form">
+            <div class="form-group">
+                <label for="campaign-name">Campaign Name</label>
+                <input type="text" id="campaign-name" name="campaignName" required />
+            </div>
+
+            <div class="form-group">
+                <label for="campaign-desc">Project Description</label>
+                <textarea id="campaign-desc" name="campaignDesc" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="funding-target">Funding Target (in $)</label>
+                <input type="number" id="funding-target" name="fundingTarget" min="1000" required />
+            </div>
+
+            <div class="form-group">
+                <label for="institution-name">College/School</label>
+                <input type="text" id="institution-name" name="institutionName" required />
+            </div>
+
+            <div class="form-group">
+                <label for="team-members">Team Members</label>
+                <input type="text" id="team-members" name="teamMembers" required />
+            </div>
+
+            <div class="form-group">
+                <label for="project-url">Project/Website Link (optional)</label>
+                <input type="url" id="project-url" name="projectUrl" />
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit Campaign</button>
+                <button type="reset" class="btn btn-outline">Reset Form</button>
+            </div>
+        </form>
+        <p id="form-message" class="form-message"></p>
     </section>
-  </main>
+</main>
+
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-copyright">

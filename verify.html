@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify School/College - ThinkForge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="explore.html">EXPLORE</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </nav>
+
+    <main class="verification-page">
+        <section class="verification-form">
+            <h1>School/College Verification</h1>
+            <p>Please provide your educational institution details for verification</p>
+            
+            <form id="verifyForm" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <label for="instituteName">Institution Name*</label>
+                    <input type="text" id="instituteName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentId">Student/Faculty ID*</label>
+                    <input type="text" id="studentId" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Institutional Email*</label>
+                    <input type="email" id="email" required 
+                           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(edu|ac\.[a-zA-Z]{2,})$">
+                    <small>Must be a valid .edu or institutional email</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="idCard">Student/Faculty ID Card*</label>
+                    <input type="file" id="idCard" accept="image/*,.pdf" required>
+                    <small>Upload a clear image/PDF of your ID card</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role*</label>
+                    <select id="role" required>
+                        <option value="">Select your role</option>
+                        <option value="student">Student</option>
+                        <option value="faculty">Faculty</option>
+                        <option value="staff">Staff</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit for Verification</button>
+            </form>
+
+            <div class="verification-info">
+                <h3>What happens next?</h3>
+                <ul>
+                    <li>Our team will review your submission within 2-3 business days</li>
+                    <li>You'll receive confirmation via email</li>
+                    <li>Once verified, you can start or support campaigns</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ThinkForge. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            // Add validation logic here
+            console.log('Form submitted for verification');
+            return false;
+        }
+    </script>
+</body>
+</html>
