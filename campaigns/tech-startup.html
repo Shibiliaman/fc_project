@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Startup Campaign - ThinkForge</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/campaign.css">
     <link rel="icon" href="../assets/logo/logo1.png">
+    <script defer src="../scripts/script.js"></script>
+    <script defer src="../scripts/campaign.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="main-nav">
@@ -21,38 +26,130 @@
         <div class="campaign-header">
             <h1>Tech Startup Innovation Hub</h1>
             <div class="campaign-status">
-                <div class="progress">
+                <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar" style="width: 60%">60%</div>
                 </div>
-                <p class="goal">$50,000 goal</p>
+                <p class="goal">₹30,00,000 goal</p>
+            </div>
+            <div class="campaign-stats">
+                <div class="stat">
+                    <span class="stat-value">₹13,500</span>
+                    <span class="stat-label">Raised</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">89</span>
+                    <span class="stat-label">Supporters</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">45</span>
+                    <span class="stat-label">Days Left</span>
+                </div>
             </div>
         </div>
 
         <div class="campaign-content">
             <section class="campaign-details">
-                <h2>About This Project</h2>
-                <p>Detailed description of the tech startup campaign...</p>
-                
-                <div class="campaign-goals">
-                    <h3>Project Goals</h3>
-                    <ul>
-                        <li>Create an innovation hub for student entrepreneurs</li>
-                        <li>Provide mentorship and resources</li>
-                        <li>Build a sustainable tech ecosystem</li>
-                    </ul>
+                <div class="campaign-media">
+                    <img src="../assets/campaigns/startup-hub.jpg" alt="Tech Startup Hub">
+                    <div class="media-gallery">
+                        <img src="../assets/campaigns/startup-2.jpg" alt="Workspace View" onclick="showImage(this)">
+                        <img src="../assets/campaigns/startup-3.jpg" alt="Meeting Area" onclick="showImage(this)">
+                        <img src="../assets/campaigns/startup-4.jpg" alt="Collaboration Space" onclick="showImage(this)">
+                    </div>
                 </div>
+
+                <article class="campaign-description">
+                    <h2>About This Project</h2>
+                    <p>The Tech Startup Innovation Hub aims to provide a collaborative space for student entrepreneurs to develop their startup ideas. This initiative will create a dynamic environment where innovation meets execution.</p>
+                    
+                    <div class="campaign-goals">
+                        <h3>Project Goals</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Create an innovation hub for student entrepreneurs</li>
+                            <li><i class="fas fa-check-circle"></i> Provide mentorship and resources</li>
+                            <li><i class="fas fa-check-circle"></i> Build a sustainable tech ecosystem</li>
+                            <li><i class="fas fa-check-circle"></i> Facilitate networking opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline">
+                        <h3>Project Timeline</h3>
+                        <div class="timeline-item">
+                            <span class="date">June 2025</span>
+                            <span class="event">Initial setup</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">July 2025</span>
+                            <span class="event">Mentor onboarding</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">August 2025</span>
+                            <span class="event">Official launch</span>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <h3>Team Members</h3>
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <img src="../assets/team/aisha.jpg" alt="Aisha Patel">
+                                <h4>Aisha Patel</h4>
+                                <p>Program Director</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="../assets/team/raj.jpg" alt="Raj Singh">
+                                <h4>Raj Singh</h4>
+                                <p>Startup Mentor</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="../assets/team/maya.jpg" alt="Maya Reddy">
+                                <h4>Maya Reddy</h4>
+                                <p>Community Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </section>
 
             <aside class="campaign-sidebar">
                 <div class="donation-box">
                     <h3>Support This Initiative</h3>
-                    <div class="funding-status">
-                        <p>Raised: $13,500</p>
-                        <p>Goal: $30,000</p>
-                        <p>Backers: 89</p>
-                        <p>Days left: 45</p>
+                    <div class="donation-amount">
+                        <p class="amount-raised">₹13,500 raised</p>
+                        <p class="backers">from 89 supporters</p>
                     </div>
-                    <button class="btn btn-primary" onclick="location.href='donate/tech-startup-donate.html'">Donate Now</button>
+                    <button class="btn btn-primary" onclick="location.href='donate/tech-startup-donate.html'">
+                        Donate Now
+                    </button>
+                </div>
+
+                <div class="share-box">
+                    <h3>Share Campaign</h3>
+                    <div class="share-buttons">
+                        <button class="btn btn-outline" onclick="shareCampaign('facebook')">
+                            <i class="fab fa-facebook"></i> Share
+                        </button>
+                        <button class="btn btn-outline" onclick="shareCampaign('twitter')">
+                            <i class="fab fa-twitter"></i> Tweet
+                        </button>
+                        <button class="btn btn-outline" onclick="shareCampaign('linkedin')">
+                            <i class="fab fa-linkedin"></i> Share
+                        </button>
+                    </div>
+                </div>
+
+                <div class="updates-box">
+                    <h3>Project Updates</h3>
+                    <div class="update-list">
+                        <div class="update-item">
+                            <span class="date">April 22, 2025</span>
+                            <p>First milestone reached! Location secured.</p>
+                        </div>
+                        <div class="update-item">
+                            <span class="date">April 18, 2025</span>
+                            <p>Partnership with local tech companies confirmed!</p>
+                        </div>
+                    </div>
                 </div>
             </aside>
         </div>
@@ -60,10 +157,20 @@
 
     <footer class="site-footer">
         <div class="footer-content">
-            <p>&copy; 2025 ThinkForge. All rights reserved.</p>
+            <div class="footer-copyright">
+                <p>&copy; 2025 ThinkForge. All rights reserved.</p>
+            </div>
             <div class="footer-links">
                 <a href="../privacy.html">Privacy Policy</a>
                 <a href="../terms.html">Terms of Service</a>
+                <a href="../support.html">Support</a>
+                <a href="../faq.html">FAQs</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>

@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Project Campaign - ThinkForge</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/campaign.css">
     <link rel="icon" href="../assets/logo/logo1.png">
+    <script defer src="../scripts/script.js"></script>
+    <script defer src="../scripts/campaign.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -23,49 +26,130 @@
         <div class="campaign-header">
             <h1>Student Art Exhibition Project</h1>
             <div class="campaign-status">
-                <div class="progress">
+                <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar" style="width: 80%">80%</div>
                 </div>
-                <p class="goal">$25,000 goal</p>
+                <p class="goal">₹25,00,000 goal</p>
+            </div>
+            <div class="campaign-stats">
+                <div class="stat">
+                    <span class="stat-value">₹20,00,000</span>
+                    <span class="stat-label">Raised</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">156</span>
+                    <span class="stat-label">Supporters</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">15</span>
+                    <span class="stat-label">Days Left</span>
+                </div>
             </div>
         </div>
 
         <div class="campaign-content">
             <section class="campaign-details">
-                <h2>About This Project</h2>
-                <p>We're organizing a groundbreaking student art exhibition that aims to showcase emerging talent from our college. This platform will give young artists the opportunity to display their work professionally and connect with the art community.</p>
-                
-                <div class="campaign-goals">
-                    <h3>Project Goals</h3>
-                    <ul>
-                        <li>Organize a professional art exhibition space</li>
-                        <li>Support 50+ student artists</li>
-                        <li>Create networking opportunities with galleries</li>
-                        <li>Establish an annual art showcase tradition</li>
-                    </ul>
+                <div class="campaign-media">
+                    <img src="../assets/campaigns/art-exhibition.jpg" alt="Student Art Exhibition">
+                    <div class="media-gallery">
+                        <img src="../assets/campaigns/art-gallery-1.jpg" alt="Gallery Space" onclick="showImage(this)">
+                        <img src="../assets/campaigns/art-gallery-2.jpg" alt="Student Artwork" onclick="showImage(this)">
+                        <img src="../assets/campaigns/art-gallery-3.jpg" alt="Exhibition Layout" onclick="showImage(this)">
+                    </div>
                 </div>
 
-                <div class="timeline">
-                    <h3>Project Timeline</h3>
-                    <ul>
-                        <li>Space booking and setup: 2 months</li>
-                        <li>Artist selection process: 1 month</li>
-                        <li>Exhibition duration: 2 weeks</li>
-                        <li>Documentation and catalog creation: 1 month</li>
-                    </ul>
-                </div>
+                <article class="campaign-description">
+                    <h2>About This Project</h2>
+                    <p>We're organizing a groundbreaking student art exhibition that aims to showcase emerging talent from our college. This platform will give young artists the opportunity to display their work professionally and connect with the art community.</p>
+                    
+                    <div class="campaign-goals">
+                        <h3>Project Goals</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Organize a professional art exhibition space</li>
+                            <li><i class="fas fa-check-circle"></i> Support 50+ student artists</li>
+                            <li><i class="fas fa-check-circle"></i> Create networking opportunities with galleries</li>
+                            <li><i class="fas fa-check-circle"></i> Establish an annual art showcase tradition</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline">
+                        <h3>Project Timeline</h3>
+                        <div class="timeline-item">
+                            <span class="date">May 2025</span>
+                            <span class="event">Space booking and setup</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">June 2025</span>
+                            <span class="event">Artist selection process</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">July 2025</span>
+                            <span class="event">Exhibition launch</span>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <h3>Team Members</h3>
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <img src="../assets/team/meera.jpg" alt="Meera Sharma">
+                                <h4>Meera Sharma</h4>
+                                <p>Exhibition Curator</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="../assets/team/alex.jpg" alt="Alex D'souza">
+                                <h4>Alex D'souza</h4>
+                                <p>Gallery Coordinator</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="../assets/team/riya.jpg" alt="Riya Kapoor">
+                                <h4>Riya Kapoor</h4>
+                                <p>Artist Liaison</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </section>
 
             <aside class="campaign-sidebar">
                 <div class="donation-box">
                     <h3>Support This Campaign</h3>
-                    <div class="funding-status">
-                        <p>Raised: $20,000</p>
-                        <p>Goal: $25,000</p>
-                        <p>Backers: 156</p>
-                        <p>Days left: 15</p>
+                    <div class="donation-amount">
+                        <p class="amount-raised">₹20,00,000 raised</p>
+                        <p class="backers">from 156 supporters</p>
                     </div>
-                    <button class="btn btn-primary" onclick="location.href='donate/art-project-donate.html'">Donate Now</button>
+                    <button class="btn btn-primary" onclick="location.href='donate/art-project-donate.html'">
+                        Donate Now
+                    </button>
+                </div>
+
+                <div class="share-box">
+                    <h3>Share Campaign</h3>
+                    <div class="share-buttons">
+                        <button class="btn btn-outline" onclick="shareCampaign('facebook')">
+                            <i class="fab fa-facebook"></i> Share
+                        </button>
+                        <button class="btn btn-outline" onclick="shareCampaign('twitter')">
+                            <i class="fab fa-twitter"></i> Tweet
+                        </button>
+                        <button class="btn btn-outline" onclick="shareCampaign('linkedin')">
+                            <i class="fab fa-linkedin"></i> Share
+                        </button>
+                    </div>
+                </div>
+
+                <div class="updates-box">
+                    <h3>Project Updates</h3>
+                    <div class="update-list">
+                        <div class="update-item">
+                            <span class="date">April 23, 2025</span>
+                            <p>Exhibition venue confirmed! Downtown Gallery partnership secured.</p>
+                        </div>
+                        <div class="update-item">
+                            <span class="date">April 19, 2025</span>
+                            <p>Artist applications now open! 30 spots already filled.</p>
+                        </div>
+                    </div>
                 </div>
             </aside>
         </div>
@@ -73,10 +157,20 @@
 
     <footer class="site-footer">
         <div class="footer-content">
-            <p>&copy; 2025 ThinkForge. All rights reserved.</p>
+            <div class="footer-copyright">
+                <p>&copy; 2025 ThinkForge. All rights reserved.</p>
+            </div>
             <div class="footer-links">
                 <a href="../privacy.html">Privacy Policy</a>
                 <a href="../terms.html">Terms of Service</a>
+                <a href="../support.html">Support</a>
+                <a href="../faq.html">FAQs</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
