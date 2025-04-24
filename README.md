@@ -43,15 +43,14 @@ fc_project/
 │   ├── script.js
 │   └── partnership-form.js
 │
-└── pages/
-    ├── index.html
-    ├── explore.html
-    ├── about.html
-    ├── contact.html
-    ├── privacy.html
-    ├── terms.html
-    ├── support.html
-    └── faq.html
+├── index.html
+├── explore.html
+├── about.html
+├── contact.html
+├── privacy.html
+├── terms.html
+├── support.html
+└── faq.html
 ```
 
 ## 🚀 Getting Started
