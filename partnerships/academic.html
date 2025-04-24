@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Partnership - ThinkForge</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/partnership-forms.css">
+    <link rel="icon" href="../assets/logo/logo1.png">
+    <script defer src="../scripts/partnership-form.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="../index.html">HOME</a>
+            <a href="../explore.html">EXPLORE</a>
+            <a href="../about.html">ABOUT US</a>
+            <a href="../contact.html">CONTACT US</a>
+        </div>
+    </nav>
+
+    <main class="partnership-form">
+        <div class="form-header">
+            <h1>Academic Partnership Application</h1>
+            <p>Join our network of educational institutions fostering student innovation</p>
+        </div>
+
+        <form id="academicForm" onsubmit="return handleSubmit(event)">
+            <div class="form-section">
+                <h2>Institution Information</h2>
+                <div class="form-group">
+                    <label for="institutionName">Institution Name*</label>
+                    <input type="text" id="institutionName" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Institution Type*</label>
+                    <select id="type" required>
+                        <option value="">Select Type</option>
+                        <option value="university">University</option>
+                        <option value="college">College</option>
+                        <option value="institute">Technical Institute</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">City/Location*</label>
+                    <input type="text" id="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="website">Institution Website</label>
+                    <input type="url" id="website" placeholder="https://...">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Primary Contact</h2>
+                <div class="form-group">
+                    <label for="contactName">Full Name*</label>
+                    <input type="text" id="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="designation">Designation*</label>
+                    <input type="text" id="designation" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department*</label>
+                    <input type="text" id="department" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Official Email*</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Contact Number*</label>
+                    <input type="tel" id="phone" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Partnership Details</h2>
+                <div class="form-group">
+                    <label>Programs of Interest*</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="programs" value="crowdfunding"> Student Crowdfunding</label>
+                        <label><input type="checkbox" name="programs" value="innovation"> Innovation Hub</label>
+                        <label><input type="checkbox" name="programs" value="mentorship"> Mentorship Network</label>
+                        <label><input type="checkbox" name="programs" value="workshops"> Training & Workshops</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="studentCount">Estimated Number of Students*</label>
+                    <select id="studentCount" required>
+                        <option value="">Select Range</option>
+                        <option value="0-1000">Less than 1,000</option>
+                        <option value="1000-5000">1,000 - 5,000</option>
+                        <option value="5000-10000">5,000 - 10,000</option>
+                        <option value="10000+">More than 10,000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="objectives">Partnership Objectives*</label>
+                    <textarea id="objectives" rows="4" required 
+                        placeholder="What are your institution's main objectives for this partnership?"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 ThinkForge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

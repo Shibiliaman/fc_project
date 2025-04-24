@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Partnership - ThinkForge</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/partnership-forms.css">
+    <link rel="icon" href="../assets/logo/logo1.png">
+    <script defer src="../scripts/partnership-form.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="../index.html">HOME</a>
+            <a href="../explore.html">EXPLORE</a>
+            <a href="../about.html">ABOUT US</a>
+            <a href="../contact.html">CONTACT US</a>
+        </div>
+    </nav>
+
+    <main class="partnership-form">
+        <div class="form-header">
+            <h1>Corporate Partnership Application</h1>
+            <p>Join our network of corporate partners supporting student innovation</p>
+        </div>
+
+        <form id="corporateForm" onsubmit="return handleSubmit(event)">
+            <div class="form-section">
+                <h2>Company Information</h2>
+                <div class="form-group">
+                    <label for="companyName">Company Name*</label>
+                    <input type="text" id="companyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry*</label>
+                    <select id="industry" required>
+                        <option value="">Select Industry</option>
+                        <option value="technology">Technology</option>
+                        <option value="finance">Finance</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="education">Education</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="website">Company Website</label>
+                    <input type="url" id="website" placeholder="https://...">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Contact Person</h2>
+                <div class="form-group">
+                    <label for="contactName">Full Name*</label>
+                    <input type="text" id="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position*</label>
+                    <input type="text" id="position" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Business Email*</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Partnership Details</h2>
+                <div class="form-group">
+                    <label>Areas of Interest*</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="interests" value="mentorship"> Mentorship</label>
+                        <label><input type="checkbox" name="interests" value="funding"> Project Funding</label>
+                        <label><input type="checkbox" name="interests" value="resources"> Resource Sharing</label>
+                        <label><input type="checkbox" name="interests" value="recruitment"> Student Recruitment</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="goals">Partnership Goals*</label>
+                    <textarea id="goals" rows="4" required 
+                        placeholder="What do you hope to achieve through this partnership?"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 ThinkForge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
